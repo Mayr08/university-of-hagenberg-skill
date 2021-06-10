@@ -9,11 +9,6 @@ class UniversityOfHagenberg(MycroftSkill):
     def handle_hagenberg_of_university(self, message):
         self.speak_dialog('hagenberg.of.university')
 
-    @intent_file_handler('people.of.hagenberg.intent')
-    def handle_hagenberg_of_university(self, message):
-        self.speak_dialog('people.of.hagenberg')
-
-
 def create_skill():
     return UniversityOfHagenberg()
 
