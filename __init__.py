@@ -5,7 +5,7 @@ import board
 import neopixel
 
 import RPi.GPIO as GPIO
-LED = 21
+LED = 25
 
 # NeoPixels must be connected to D10, D12, D18 or D21 to work.
 pixel_pin = board.D21
