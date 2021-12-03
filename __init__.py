@@ -13,9 +13,9 @@ num_pixels = 24
 # For RGBW NeoPixels, simply change the ORDER to RGBW or GRBW.
 ORDER = neopixel.GRB
 
-pixels = neopixel.NeoPixel(
-    pixel_pin, num_pixels, brightness=0.1, auto_write=False, pixel_order=ORDER
-)
+#pixels = neopixel.NeoPixel(
+#    pixel_pin, num_pixels, brightness=0.1, auto_write=False, pixel_order=ORDER
+#)
 
 class UniversityOfHagenberg(MycroftSkill):
     def __init__(self):
