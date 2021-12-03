@@ -21,7 +21,7 @@ class UniversityOfHagenberg(MycroftSkill):
     def __init__(self):
         MycroftSkill.__init__(self)
 
-    def _turnOnLED(self):
+    #def _turnOnLED(self):
         # Comment this line out if you have RGBW/GRBW NeoPixels
     #    pixels.fill((255, 0, 0))
         # Uncomment this line if you have RGBW/GRBW NeoPixels
@@ -35,7 +35,7 @@ class UniversityOfHagenberg(MycroftSkill):
         
     @intent_file_handler('turn.on.led.intent')
     def handle_hagenberg_of_university(self, message):
-        self._turnOnLED()
+        #self._turnOnLED()
         self.speak_dialog('turn.on.led')    
 
 def create_skill():
