@@ -23,8 +23,9 @@ class UniversityOfHagenberg(MycroftSkill):
         
     def _turnOnLED(self):
         pixels.fill((255, 0, 0))
+        pixels.show()
         time.sleep(5)
-
+        
     @intent_file_handler('hagenberg.of.university.intent')
     def handle_hagenberg_of_university(self, message):
         self.speak_dialog('hagenberg.of.university')
