@@ -22,7 +22,8 @@ class UniversityOfHagenberg(MycroftSkill):
         MycroftSkill.__init__(self)
         
     def _turnOnLED(self):
-        time.sleep(1)
+        pixels.fill((255, 0, 0))
+        time.sleep(5)
 
     @intent_file_handler('hagenberg.of.university.intent')
     def handle_hagenberg_of_university(self, message):
