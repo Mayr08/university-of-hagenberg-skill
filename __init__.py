@@ -26,12 +26,12 @@ class UniversityOfHagenberg(MycroftSkill):
         
     def _turnOnLED(self):
         try:
-            #GPIO.setmode(GPIO.BCM)
-            #GPIO.setwarnings(False)
-            #GPIO.setup(LED, GPIO.OUT)
-            #GPIO.output(LED, GPIO.HIGH)
-            pixels.fill((255, 0, 0))
-            pixels.show()
+            GPIO.setmode(GPIO.BOARD)
+            GPIO.setwarnings(False)
+            GPIO.setup(LED, GPIO.OUT)
+            GPIO.output(LED, GPIO.HIGH)
+            #pixels.fill((255, 0, 0))
+            #pixels.show()
         except GPIO.error:
             self.log.warning("Can't initialize GPIO - skill will not load")
         time.sleep(5)
