@@ -13,21 +13,21 @@ num_pixels = 24
 # For RGBW NeoPixels, simply change the ORDER to RGBW or GRBW.
 ORDER = neopixel.GRB
 
-pixels = neopixel.NeoPixel(
-    pixel_pin, num_pixels, brightness=0.1, auto_write=False, pixel_order=ORDER
-)
+#pixels = neopixel.NeoPixel(
+#    pixel_pin, num_pixels, brightness=0.1, auto_write=False, pixel_order=ORDER
+#)
 
 class UniversityOfHagenberg(MycroftSkill):
     def __init__(self):
         MycroftSkill.__init__(self)
 
-    def _turnOnLED(self):
+    #def _turnOnLED(self):
         # Comment this line out if you have RGBW/GRBW NeoPixels
-        pixels.fill((255, 0, 0))
+    #    pixels.fill((255, 0, 0))
         # Uncomment this line if you have RGBW/GRBW NeoPixels
         # pixels.fill((255, 0, 0, 0))
-        pixels.show()
-        time.sleep(1)
+    #    pixels.show()
+    #    time.sleep(1)
     
     @intent_file_handler('hagenberg.of.university.intent')
     def handle_hagenberg_of_university(self, message):
@@ -35,7 +35,7 @@ class UniversityOfHagenberg(MycroftSkill):
         
     @intent_file_handler('turn.on.led.intent')
     def handle_hagenberg_of_university(self, message):
-        self._turnOnLED()
+        #self._turnOnLED()
         self.speak_dialog('turn.on.led')    
 
 def create_skill():
