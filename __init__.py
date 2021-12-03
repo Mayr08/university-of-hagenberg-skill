@@ -5,7 +5,7 @@ import board
 import neopixel
 
 import RPi.GPIO as GPIO
-LED = 25
+LED = 21
 
 # NeoPixels must be connected to D10, D12, D18 or D21 to work.
 pixel_pin = board.D21
@@ -26,14 +26,14 @@ class UniversityOfHagenberg(MycroftSkill):
         
     def _turnOnLED(self):
         try:
-            GPIO.setmode(GPIO.BCM)
-            GPIO.setwarnings(False)
-            GPIO.setup(LED, GPIO.OUT)
-            GPIO.output(LED, GPIO.HIGH)
+            #GPIO.setmode(GPIO.BCM)
+            #GPIO.setwarnings(False)
+            #GPIO.setup(LED, GPIO.OUT)
+            #GPIO.output(LED, GPIO.HIGH)
+            pixels.fill((255, 0, 0))
+            pixels.show()
         except GPIO.error:
             self.log.warning("Can't initialize GPIO - skill will not load")
-        #pixels.fill((255, 0, 0))
-        #pixels.show()
         time.sleep(5)
         
     @intent_file_handler('hagenberg.of.university.intent')
