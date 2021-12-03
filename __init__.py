@@ -20,6 +20,9 @@ pixels = neopixel.NeoPixel(
 class UniversityOfHagenberg(MycroftSkill):
     def __init__(self):
         MycroftSkill.__init__(self)
+        
+    def _turnOnLED(self):
+        time.sleep(1)
 
     @intent_file_handler('hagenberg.of.university.intent')
     def handle_hagenberg_of_university(self, message):
